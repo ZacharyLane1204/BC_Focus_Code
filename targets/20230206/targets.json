@@ -1,0 +1,62 @@
+[
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "NGC1232",
+    "filter": "g",
+    "expTime": 60,
+    "ra": 3.1576666666666666,
+    "dec": -20.574333333333332,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "NGC1232",
+    "filter": " r ",
+    "expTime": 60,
+    "ra": 3.1576666666666666,
+    "dec": -20.574333333333332,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "NGC1232",
+    "filter": "i",
+    "expTime": 60,
+    "ra": 3.1576666666666666,
+    "dec": -20.574333333333332,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "Helix Nebula",
+    "filter": "Halpha",
+    "expTime": 300,
+    "ra": 22.489833333333333,
+    "dec": -20.83566666666667,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "Helix Nebula",
+    "filter": " SII",
+    "expTime": 300,
+    "ra": 22.489833333333333,
+    "dec": -20.83566666666667,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "Helix Nebula",
+    "filter": " OIII",
+    "expTime": 300,
+    "ra": 22.489833333333333,
+    "dec": -20.83566666666667,
+    "priority": 1
+  }
+]
