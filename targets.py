@@ -29,8 +29,10 @@ def get_target_list():
     df = pd.read_csv('targets.csv')
     return df
 
-def make_list(name_priority=None):
-    date = get_today()
+def make_list(date):
+    if date is None:
+        date = get_today()
+    date = str(date)
 
     save_path = package_directory + 'targets/' + date
 
@@ -63,6 +65,7 @@ def make_entries(data,readout=5):
         dec = coordinates(dec)
         type_obs = l.Type
         if type_obs == 'Nebula':
+            filters = ['Halpha', 'SII', 'OIII']
             exptime = 300
         else:
             exptime = l['Exposure Time']
@@ -93,4 +96,4 @@ def coordinates(x):
     x = float(x)
     return(x)
 
-data = make_list()
+# data = make_list()

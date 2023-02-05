@@ -25,7 +25,6 @@ from glob import glob
 import json 
 
 from utilly import *
-# from datetime import date
 import os
 package_directory = os.path.dirname(os.path.abspath(__file__)) + '/'
 
@@ -88,7 +87,6 @@ def make_schedule(date,telescope):
     if date is None:
         date = get_today()
     date = str(date)
-    print('ZAC:', date)
     
     print(package_directory + date)
     targets = glob(package_directory + 'targets/' + date + '/*.json' )
@@ -117,8 +115,8 @@ def make_schedule(date,telescope):
         m = 'No transitioner set'
         raise ValueError(m)
 
-
     dat = '{y}-{m}-{d}'.format(y=date[0:4],m=date[4:6],d=date[6:8])
+    print('Dat', dat)
     noon_before = Time(dat + ' 06:00')
     noon_after = Time(dat + ' 20:00')
 
@@ -155,7 +153,4 @@ def make_schedule(date,telescope):
 
 if __name__ == '__main__':
     date=None
-    Tele =['moa', 'bc']
-    # T = 'moa'
-    # for T in Tele:
     make_schedule(date, telescope = 'bc')

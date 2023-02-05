@@ -57,9 +57,9 @@ def round_look_exposures(exptime):
 
 def priority_time(priority):
     if priority > 3:
-        total_time = 5*300
+        total_time = 3*300
     else:
-        total_time = 5*300
+        total_time = 3*300
     return total_time
 
 def make_look_entries(look,readout=5,filters=['g', 'r']):
@@ -119,11 +119,12 @@ def look_priority(look,names=None,mag_priority=[['19-17',3],['17-15',4],['15-12'
 
 
 
-def make_look_list(name_priority,mag_priority):
+def make_look_list(date, name_priority, mag_priority):
     """
     Generate the target json target file for active LOOK targets. 
     """
-    date = get_today()
+    if date is None:
+        date = get_today()
     date = str(date)
 
     save_path = package_directory + 'targets/' + date
