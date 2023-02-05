@@ -29,9 +29,15 @@ https://docs.google.com/spreadsheets/d/1MC6uRbzfPupTay3QvXSHlgwqOou4a6H2Ac3feXzr
 ; once you are done with a focus list you can duplicate the sheet (rename it with the UTC date), and please please please note the outside temperature in this document (from http://www2.phys.canterbury.ac.nz/~physweb/node1/belchertown/ )!!!! Then rename the copy; delete all entries of 'Sheet1'. The name must be 'Sheet1' for this code to work!!
 
 
-scheduler_main.py
+general_main.py
 
 Generates a target list and plot for the night. Draws from:
+
+https://docs.google.com/spreadsheets/d/1l4JhjWdfvWFeNe-L6eJdcY93oLUa7MS4qk2H5n3-ERY/edit
+
+scheduler_main.py
+
+Generates a target list and plot for the night, this also draws from the LOOK target list. Draws from:
 
 https://docs.google.com/spreadsheets/d/1l4JhjWdfvWFeNe-L6eJdcY93oLUa7MS4qk2H5n3-ERY/edit
 
