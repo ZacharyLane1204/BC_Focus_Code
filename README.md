@@ -22,7 +22,7 @@ https://docs.google.com/spreadsheets/d/1l4JhjWdfvWFeNe-L6eJdcY93oLUa7MS4qk2H5n3-
 
 focus_main_csv.py
 
-Determines the focus. Choose a bright (but not over-saturated) star and analyse the profile with ctrl+i on Maxim DL6. Note the FWHM and Focus in the following sheet as in the example sheet:
+Determines the focus. Choose a bright (but not over-saturated) star and analyse the profile with ctrl+i on Maxim DL6 and hover the mouse over the target star. Note the FWHM and Focus in the following sheet as in the example sheet:
 
 https://docs.google.com/spreadsheets/d/1MC6uRbzfPupTay3QvXSHlgwqOou4a6H2Ac3feXzrVb4/edit#gid=0
 
