@@ -80,7 +80,7 @@ def make_look_entries(look,readout=5,filters=['g', 'r']):
                 print(m)
                 exptime = 300
             ra,dec = format_coord(l['R.A.'],l['Dec.'])
-            name = l['Target Name'].replace(' ','_').replace('/','') + '_22S01'
+            name = l['Target Name'].replace(' ','_').replace('/','')
             priority = l['priority']
             total_time = priority_time(priority)
                     
@@ -93,7 +93,7 @@ def make_look_entries(look,readout=5,filters=['g', 'r']):
     return obs    
             
 
-def look_priority(look,names=None,mag_priority=[['19-17',3],['17-15',4],['15-12',5]]):
+def look_priority(look,names=None,mag_priority=[['19-17',5],['17-15',4],['15-12',3]]):
     looks = deepcopy(look['active'])
     looks['priority'] = int(3)
     if mag_priority is not None:
@@ -140,4 +140,4 @@ def make_look_list(date, name_priority, mag_priority):
 
 
 if __name__ == '__main__':
-    make_look_list(name_priority=[['81P',1],['73P',1],['UN271',1]],mag_priority=[['22-19',3],['19-17',4],['17-15',5],['15-12',6]])
+    make_look_list(date, name_priority=[['81P',2],['73P',2],['UN271',2]], mag_priority=[['19-17',5],['17-15',4],['15-12',3]])
