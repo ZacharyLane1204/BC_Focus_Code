@@ -41,7 +41,13 @@ Generates a target list and plot for the night, this also draws from the LOOK ta
 
 https://docs.google.com/spreadsheets/d/1l4JhjWdfvWFeNe-L6eJdcY93oLUa7MS4qk2H5n3-ERY/edit
 
+planet_position_main.py
 
+Determines the planet position for the target list on a specific date. Use this number to edit the Target List as in the example sheet:
+
+https://docs.google.com/spreadsheets/d/1l4JhjWdfvWFeNe-L6eJdcY93oLUa7MS4qk2H5n3-ERY/edit
+
+, once you are done with a target list you can duplicate the sheet (rename it with the UTC date), rename the copy, delete all entries of 'Sheet1'. The name must be 'Sheet1' for this code to work!!
 
 ## Utility Scripts:
 
