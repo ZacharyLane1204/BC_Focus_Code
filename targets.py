@@ -70,6 +70,9 @@ def make_entries(data,readout=5):
         if type_obs == 'Nebula':
             filters = ['Halpha', 'SII', 'OIII']
             exptime = 300
+        # if type_obs == 'Planet':
+        #     filters = ['Halpha', 'SII', 'OIII', 
+        #                'Methane', 'U', 'B', 'g', 'r', 'i']
         else:
             exptime = l['Exposure Time']
         exptime = int(exptime)
