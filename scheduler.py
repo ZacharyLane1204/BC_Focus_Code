@@ -90,9 +90,7 @@ def make_schedule(date,telescope):
     
     print(package_directory + date)
     targets = glob(package_directory + 'targets/' + date + '/*.json' )
-    # print(targets)
     blocks = []
-    print(targets)
     for target in targets:
         print('!!!! ',target)
         targ = json.load(open(target))
@@ -116,7 +114,6 @@ def make_schedule(date,telescope):
         raise ValueError(m)
 
     dat = '{y}-{m}-{d}'.format(y=date[0:4],m=date[4:6],d=date[6:8])
-    print('Dat', dat)
     noon_before = Time(dat + ' 06:00')
     noon_after = Time(dat + ' 20:00')
 

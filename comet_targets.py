@@ -70,15 +70,7 @@ def make_look_entries(look,readout=5,filters=['g', 'r']):
         for j in range(len(ll)):
             l = ll.iloc[j]
             rate_lim = rate_limit(l['Rate ("/min)'])
-            exptime = rough_exptime(l['V Mag.'])
-            if rate_lim < exptime:
-                m = '!!! exposure time is too long for rate!!! \n Rescaling: {}s -> {}s'.format(exptime,rate_lim)
-                print(m)
-                exptime = rate_lim
-            if 300 < exptime:
-                m = '!!! exposure time is too long for tracking!!! \n Rescaling: {}s -> {}s'.format(exptime,500)
-                print(m)
-                exptime = 300
+            exptime = 300
             ra,dec = format_coord(l['R.A.'],l['Dec.'])
             name = l['Target Name'].replace(' ','_').replace('/','')
             priority = l['priority']
@@ -104,7 +96,6 @@ def look_priority(look,names=None,mag_priority=[['19-17',5],['17-15',4],['15-12'
                 temp = deepcopy(f)
                 f = b
                 b = temp
-            print(f,b)
             ind = (looks['V Mag.'].values < f) & (looks['V Mag.'].values > b)
             looks['priority'].iloc[ind] = int(mag_priority[i][1])
 

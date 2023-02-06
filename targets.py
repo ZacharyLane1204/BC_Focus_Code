@@ -53,16 +53,19 @@ def make_entries(data,readout=5):
     obs = []
     
     for j in range(len(data)):
+        
         l = data.iloc[j]
         repeats = 3
         mag = l.Magnitude
         exp = bc_focus(mag)
-        ra = l.RA
+
         filters = l.Filter
         filters = filters.split(',')
-        ra = coordinates(ra)
+        
+        ra = l.RA
+        ra = coordinates_angle(ra)
         dec = l.DEC
-        dec = coordinates(dec)
+        dec = coordinates_angle(dec)
         type_obs = l.Type
         if type_obs == 'Nebula':
             filters = ['Halpha', 'SII', 'OIII']
@@ -76,24 +79,5 @@ def make_entries(data,readout=5):
             ob = make_obs_entry(exptime,f,repeats,name,ra,dec,priority=priority)
             obs += [ob]
     return obs    
-
-def coordinates(x):
-    x = x.split(':')
-    x[0] = str(x[0])
-    
-    x[1] = float(x[1])
-    x[1] /= 60
-    
-    x[2] = float(x[2])
-    x[2] /= 6000
-    
-    x_l = x[1] + x[2]
-    x_l = str(x_l)
-    x = x[0] + ' ' + x_l
-    x = x.split(' ')
-    x[1] = x[1][1:]
-    x = ''.join(x)
-    x = float(x)
-    return(x)
 
 # data = make_list()
