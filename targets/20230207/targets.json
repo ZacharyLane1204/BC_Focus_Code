@@ -1,0 +1,212 @@
+[
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "NGC1232",
+    "filter": "g",
+    "expTime": 60,
+    "ra": 3.1576666666666666,
+    "dec": -20.574333333333332,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "NGC1232",
+    "filter": "r",
+    "expTime": 60,
+    "ra": 3.1576666666666666,
+    "dec": -20.574333333333332,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "NGC1232",
+    "filter": "i",
+    "expTime": 60,
+    "ra": 3.1576666666666666,
+    "dec": -20.574333333333332,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "Helix Nebula",
+    "filter": "Halpha",
+    "expTime": 300,
+    "ra": 22.489833333333333,
+    "dec": -20.83566666666667,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "Helix Nebula",
+    "filter": "SII",
+    "expTime": 300,
+    "ra": 22.489833333333333,
+    "dec": -20.83566666666667,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "Helix Nebula",
+    "filter": "OIII",
+    "expTime": 300,
+    "ra": 22.489833333333333,
+    "dec": -20.83566666666667,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "NGC2207",
+    "filter": "g",
+    "expTime": 90,
+    "ra": 6.270333333333333,
+    "dec": -21.370333333333335,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "NGC2207",
+    "filter": "r",
+    "expTime": 90,
+    "ra": 6.270333333333333,
+    "dec": -21.370333333333335,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "NGC2207",
+    "filter": "i",
+    "expTime": 90,
+    "ra": 6.270333333333333,
+    "dec": -21.370333333333335,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "M58",
+    "filter": "g",
+    "expTime": 60,
+    "ra": 12.624,
+    "dec": 11.8175,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "M58",
+    "filter": "r",
+    "expTime": 60,
+    "ra": 12.624,
+    "dec": 11.8175,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "M58",
+    "filter": "i",
+    "expTime": 60,
+    "ra": 12.624,
+    "dec": 11.8175,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "M61",
+    "filter": "g",
+    "expTime": 60,
+    "ra": 12.359166666666667,
+    "dec": 4.470833333333333,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "M61",
+    "filter": "r",
+    "expTime": 60,
+    "ra": 12.359166666666667,
+    "dec": 4.470833333333333,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "M61",
+    "filter": "i",
+    "expTime": 60,
+    "ra": 12.359166666666667,
+    "dec": 4.470833333333333,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "NGC5068",
+    "filter": "g",
+    "expTime": 60,
+    "ra": 13.309166666666666,
+    "dec": -21.036833333333334,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "NGC5068",
+    "filter": "r",
+    "expTime": 60,
+    "ra": 13.309166666666666,
+    "dec": -21.036833333333334,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "NGC5068",
+    "filter": "i",
+    "expTime": 60,
+    "ra": 13.309166666666666,
+    "dec": -21.036833333333334,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "Jupiter",
+    "filter": "g",
+    "expTime": 0,
+    "ra": 0.4555,
+    "dec": 1.7094999999999998,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "Jupiter",
+    "filter": "r",
+    "expTime": 0,
+    "ra": 0.4555,
+    "dec": 1.7094999999999998,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "Jupiter",
+    "filter": "i",
+    "expTime": 0,
+    "ra": 0.4555,
+    "dec": 1.7094999999999998,
+    "priority": 1
+  }
+]

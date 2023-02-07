@@ -85,7 +85,7 @@ def make_look_entries(look,readout=5,filters=['g', 'r']):
     return obs    
             
 
-def look_priority(look,names=None,mag_priority=[['19-17',5],['17-15',4],['15-12',3]]):
+def look_priority(look,mag_priority=[['19-17',5],['17-15',4],['15-12',3]]):
     looks = deepcopy(look['active'])
     looks['priority'] = int(3)
     if mag_priority is not None:
@@ -99,18 +99,12 @@ def look_priority(look,names=None,mag_priority=[['19-17',5],['17-15',4],['15-12'
             ind = (looks['V Mag.'].values < f) & (looks['V Mag.'].values > b)
             looks['priority'].iloc[ind] = int(mag_priority[i][1])
 
-    if names is not None:
-        for i in range(len(names)):
-            name = names[i]
-            for j in range(len(looks)):
-                if name[0] in looks.iloc[j]['Target Name']:
-                    looks['priority'].iloc[j] = int(name[1])
     look['active'] = looks
     return look
 
 
 
-def make_look_list(date, name_priority, mag_priority):
+def make_look_list(date, mag_priority):
     """
     Generate the target json target file for active LOOK targets. 
     """
@@ -123,7 +117,7 @@ def make_look_list(date, name_priority, mag_priority):
     make_dir(save_path)
 
     look = scrub_look_targets()
-    look = look_priority(look,names=name_priority,mag_priority=mag_priority)
+    look = look_priority(look, mag_priority=mag_priority)
     looks = make_look_entries(look)
     save_targs(looks,save_path + '/look.json')
 

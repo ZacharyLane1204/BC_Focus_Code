@@ -57,24 +57,61 @@ def make_entries(data,readout=5):
         l = data.iloc[j]
         repeats = 3
         mag = l.Magnitude
-        exp = bc_focus(mag)
-
         filters = l.Filter
-        filters = filters.split(',')
-        
+        filters = str(filters)
+        if filters != 'nan':
+            filters = filters.split(',')
         ra = l.RA
         ra = coordinates_angle(ra)
         dec = l.DEC
         dec = coordinates_angle(dec)
-        type_obs = l.Type
+        type_obs = str(l.Type)
+        
         if type_obs == 'Nebula':
-            filters = ['Halpha', 'SII', 'OIII']
+            if filters == 'nan':
+                filters = ['Halpha', 'SII', 'OIII']
             exptime = 300
-        # if type_obs == 'Planet':
-        #     filters = ['Halpha', 'SII', 'OIII', 
-        #                'Methane', 'U', 'B', 'g', 'r', 'i']
-        else:
+        elif type_obs == 'nebula':
+            if filters == 'nan':
+                filters = ['Halpha', 'SII', 'OIII']
+            exptime = 300
+        elif type_obs == 'Galaxy':
+            if filters == 'nan':
+                filters = ['g', 'r', 'i']
             exptime = l['Exposure Time']
+        elif type_obs == 'galaxy':
+            if filters == 'nan':
+                filters = ['g', 'r', 'i']
+            exptime = l['Exposure Time']
+        elif type_obs == 'Cluster':
+            if filters == 'nan':
+                filters = ['g', 'r', 'i']
+            exptime = l['Exposure Time']
+        elif type_obs == 'cluster':
+            if filters == 'nan':
+                filters = ['g', 'r', 'i']
+            exptime = l['Exposure Time']        
+        elif type_obs == 'Planet':
+            if filters == 'nan':
+                filters = ['Halpha', 'SII', 'OIII', 
+                            'Methane', 'U', 'B', 'g']        
+        elif type_obs == 'planet':
+            if filters == 'nan':
+                filters = ['Halpha', 'SII', 'OIII', 
+                            'Methane', 'U', 'B', 'g']   
+        elif type_obs == 'star':
+            if filters == 'nan':
+                filters = ['g', 'r']
+            exptime = l['Exposure Time']
+        elif type_obs == 'Star':
+            if filters == 'nan':
+                filters = ['g', 'r']
+            exptime = l['Exposure Time'] 
+        else:
+            if filters == 'nan':
+                filters = ['g', 'r', 'i']
+            exptime = l['Exposure Time']
+
         exptime = int(exptime)
         name = l['Target Name']
         priority = l['Priority']
