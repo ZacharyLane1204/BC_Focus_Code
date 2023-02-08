@@ -8,6 +8,8 @@ https://github.com/CheerfulUser/astroplan
 
 Git clone this directory for this to work as well
 
+Requires numpy, pandas, matplotlib, astropy, astroquery
+
 ## Main Scripts:
 
 
