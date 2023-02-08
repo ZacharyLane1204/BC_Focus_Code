@@ -1,6 +1,6 @@
 # BC_Focus_Code
 
-This is a basic script for determining the focus, exposure time and making the schedule for the Mt John B&C trip
+This is a basic script for determining the focus, exposure time and making the schedule for the Mt John B&C trip. This script reads a target list from a google sheet. It will search names from the SIMBAD database if no coordinates are given - however, this does not do non-sidereal moving objects apart from the planets yet (planned for a future update).
 
 Please git clone the following directory first!
 
@@ -9,6 +9,8 @@ https://github.com/CheerfulUser/astroplan
 Git clone this directory for this to work as well
 
 Requires numpy, pandas, matplotlib, astropy, astroquery
+
+Remember to use conda or pip install depending if you have an anaconda environment installed.
 
 ## Main Scripts:
 
