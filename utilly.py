@@ -116,4 +116,29 @@ def coordinates_string_ra(x):
     x = x_l[0] + ':' + x[0] + ':' + x[1]
     return x
 
+def coordinates_space(x):
+    x = x.split(' ')
+    if len(x) == 2:
+        xl = x[1].split('.')
+        xl[1] = "0." + xl[1]
+        xl[1] = float(xl[1]) * 60
+        x = [x[0], xl[0], xl[1]]
+        
+        
+    x[0] = str(x[0])
+    x[1] = float(x[1])
+    x[1] /= 60
+    
+    x[2] = float(x[2])
+    x[2] /= 6000
+    
+    x_l = x[1] + x[2]
+    x_l = str(x_l)
+    x = x[0] + ' ' + x_l
+    x = x.split(' ')
+    x[1] = x[1][1:]
+    x = ''.join(x)
+    x = float(x)
+    return(x)
+
 # print(get_today())

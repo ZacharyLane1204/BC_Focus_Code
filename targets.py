@@ -11,6 +11,7 @@ import pandas as pd
 import requests
 from utilly import *
 from exposure_BC_utils import bc_focus
+from astroquery.simbad import Simbad
 
 
 # Data that I input. Feel free to adjust as this is a rough guide
@@ -61,11 +62,41 @@ def make_entries(data,readout=5):
         filters = str(filters)
         if filters != 'nan':
             filters = filters.split(',')
-        ra = l.RA
-        ra = coordinates_angle(ra)
-        dec = l.DEC
-        dec = coordinates_angle(dec)
+        ra = str(l.RA)
+        dec = str(l.DEC)
         type_obs = str(l.Type)
+        name = l['Target Name']
+        
+        exptime = l['Exposure Time']
+        if str(exptime) == 'nan':
+            exptime = 60 # Default time
+            exptime = int(exptime)
+            print()
+            print('No exposure time given. Setting "{0}" to {1}s'.format(name, exptime))
+            print()
+        if ra == 'nan':
+            print()
+            print('No RA coordinates entered, searching for "{0}"'.format(name))
+            print()
+            obj = Simbad.query_object(name)
+    
+            ra = str(obj['RA'][0])
+            dec = str(obj['DEC'][0])
+            ra = coordinates_space(ra)
+            dec = coordinates_space(dec)
+        elif dec == 'nan':
+            print()
+            print('No DEC coordinates entered, searching for "{0}"'.format(name))
+            print()
+            obj = Simbad.query_object(name)
+    
+            ra = str(obj['RA'][0])
+            dec = str(obj['DEC'][0])
+            ra = coordinates_space(ra)
+            dec = coordinates_space(dec)
+        else:
+            ra = coordinates_angle(ra)
+            dec = coordinates_angle(dec)
         
         if type_obs == 'Nebula':
             if filters == 'nan':
@@ -78,19 +109,15 @@ def make_entries(data,readout=5):
         elif type_obs == 'Galaxy':
             if filters == 'nan':
                 filters = ['g', 'r', 'i']
-            exptime = l['Exposure Time']
         elif type_obs == 'galaxy':
             if filters == 'nan':
                 filters = ['g', 'r', 'i']
-            exptime = l['Exposure Time']
         elif type_obs == 'Cluster':
             if filters == 'nan':
                 filters = ['g', 'r', 'i']
-            exptime = l['Exposure Time']
         elif type_obs == 'cluster':
             if filters == 'nan':
-                filters = ['g', 'r', 'i']
-            exptime = l['Exposure Time']        
+                filters = ['g', 'r', 'i']     
         elif type_obs == 'Planet':
             if filters == 'nan':
                 filters = ['Halpha', 'SII', 'OIII', 
@@ -102,18 +129,13 @@ def make_entries(data,readout=5):
         elif type_obs == 'star':
             if filters == 'nan':
                 filters = ['g', 'r']
-            exptime = l['Exposure Time']
         elif type_obs == 'Star':
             if filters == 'nan':
                 filters = ['g', 'r']
-            exptime = l['Exposure Time'] 
         else:
             if filters == 'nan':
                 filters = ['g', 'r', 'i']
-            exptime = l['Exposure Time']
-
         exptime = int(exptime)
-        name = l['Target Name']
         priority = l['Priority']
         for f in filters:
             ob = make_obs_entry(exptime,f,repeats,name,ra,dec,priority=priority)
