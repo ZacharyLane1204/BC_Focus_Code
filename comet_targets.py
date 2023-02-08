@@ -86,20 +86,22 @@ def make_look_entries(look,readout=5,filters=['g', 'r']):
             
 
 def look_priority(look,mag_priority=[['19-17',5],['17-15',4],['15-12',3]]):
-    looks = deepcopy(look['active'])
-    looks['priority'] = int(3)
+    # looks = deepcopy(look['active'])
+    look['active']['priority'] = int(3)
     if mag_priority is not None:
         for i in range(len(mag_priority)):
             f,b = mag_priority[i][0].split('-')
             b = float(b); f = float(f)
             if b > f:
+                # temp = np.array(f)
+                # temp = float(temp[0])
                 temp = deepcopy(f)
                 f = b
                 b = temp
-            ind = (looks['V Mag.'].values < f) & (looks['V Mag.'].values > b)
-            looks['priority'].iloc[ind] = int(mag_priority[i][1])
+            ind = (look['active']['V Mag.'].values < f) & (look['active']['V Mag.'].values > b)
+            look['active']['priority'].iloc[ind] = int(mag_priority[i][1])
 
-    look['active'] = looks
+    # look['active'] = looks
     return look
 
 

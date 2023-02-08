@@ -92,7 +92,7 @@ def make_schedule(date,telescope):
     targets = glob(package_directory + 'targets/' + date + '/*.json' )
     blocks = []
     for target in targets:
-        print('!!!! ',target)
+        # print('!!!! ',target)
         targ = json.load(open(target))
         for ob in targ:
             if telescope.lower() == 'moa':

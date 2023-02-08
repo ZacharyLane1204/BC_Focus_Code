@@ -12,6 +12,7 @@ import requests
 from utilly import *
 from exposure_BC_utils import bc_focus
 from astroquery.simbad import Simbad
+from planet_position_main import planet_coordinates
 
 
 # Data that I input. Feel free to adjust as this is a rough guide
@@ -41,7 +42,7 @@ def make_list(date):
 
     df = get_target_list()
     df = priority(df)
-    data = make_entries(df)
+    data = make_entries(date, df)
     save_targs(data,save_path + '/targets.json')
     print('!!! Made target list for ' + date + ' !!!')
 
@@ -50,7 +51,7 @@ def priority(data):
     data['Priority'] = int(1)
     return data
 
-def make_entries(data,readout=5):
+def make_entries(date, data, readout=5):
     obs = []
     
     for j in range(len(data)):
@@ -66,6 +67,39 @@ def make_entries(data,readout=5):
         dec = str(l.DEC)
         type_obs = str(l.Type)
         name = l['Target Name']
+        name = str(name)
+        
+        if name.lower() == 'jupiter':
+            print()
+            print('Finding coordinates for Jupiter')
+            ra, dec = planet_coordinates('Jupiter', date, printout = False)   
+        elif name.lower() == 'mercury':
+            print()
+            print('Finding coordinates for Mercury')
+            ra, dec = planet_coordinates('Mercury', date, printout = False)             
+        elif name.lower() == 'venus':
+            print()
+            print('Finding coordinates for Venus')
+            ra, dec = planet_coordinates('Venus', date, printout = False)
+        elif name.lower() == 'mars':
+            print()
+            print('Finding coordinates for Mars')
+            ra, dec = planet_coordinates('Mars', date, printout = False)
+        elif name.lower() == 'saturn':
+            print()
+            print('Finding coordinates for Saturn')
+            ra, dec = planet_coordinates('Saturn', date, printout = False)  
+        elif name.lower() == 'uranus':
+            print()
+            print('Finding coordinates for Uranus')
+            ra, dec = planet_coordinates('Uranus', date, printout = False)  
+        elif name.lower() == 'neptune':
+            print()
+            print('Finding coordinates for Neptune')
+            ra, dec = planet_coordinates('Neptune', date, printout = False) 
+
+        if name == 'nan':
+            continue
         
         exptime = l['Exposure Time']
         if str(exptime) == 'nan':
@@ -73,11 +107,9 @@ def make_entries(data,readout=5):
             exptime = int(exptime)
             print()
             print('No exposure time given. Setting "{0}" to {1}s'.format(name, exptime))
-            print()
         if ra == 'nan':
             print()
             print('No RA coordinates entered, searching for "{0}"'.format(name))
-            print()
             obj = Simbad.query_object(name)
     
             ra = str(obj['RA'][0])
@@ -87,7 +119,6 @@ def make_entries(data,readout=5):
         elif dec == 'nan':
             print()
             print('No DEC coordinates entered, searching for "{0}"'.format(name))
-            print()
             obj = Simbad.query_object(name)
     
             ra = str(obj['RA'][0])
@@ -98,38 +129,22 @@ def make_entries(data,readout=5):
             ra = coordinates_angle(ra)
             dec = coordinates_angle(dec)
         
-        if type_obs == 'Nebula':
+        
+        if type_obs.lower() == 'nebula':
             if filters == 'nan':
                 filters = ['Halpha', 'SII', 'OIII']
             exptime = 300
-        elif type_obs == 'nebula':
-            if filters == 'nan':
-                filters = ['Halpha', 'SII', 'OIII']
-            exptime = 300
-        elif type_obs == 'Galaxy':
+        elif type_obs.lower() == 'galaxy':
             if filters == 'nan':
                 filters = ['g', 'r', 'i']
-        elif type_obs == 'galaxy':
+        elif type_obs.lower() == 'cluster':
             if filters == 'nan':
-                filters = ['g', 'r', 'i']
-        elif type_obs == 'Cluster':
-            if filters == 'nan':
-                filters = ['g', 'r', 'i']
-        elif type_obs == 'cluster':
-            if filters == 'nan':
-                filters = ['g', 'r', 'i']     
-        elif type_obs == 'Planet':
-            if filters == 'nan':
-                filters = ['Halpha', 'SII', 'OIII', 
-                            'Methane', 'U', 'B', 'g']        
-        elif type_obs == 'planet':
+                filters = ['g', 'r', 'i'] 
+        elif type_obs.lower() == 'planet':
             if filters == 'nan':
                 filters = ['Halpha', 'SII', 'OIII', 
                             'Methane', 'U', 'B', 'g']   
-        elif type_obs == 'star':
-            if filters == 'nan':
-                filters = ['g', 'r']
-        elif type_obs == 'Star':
+        elif type_obs.lower() == 'star':
             if filters == 'nan':
                 filters = ['g', 'r']
         else:

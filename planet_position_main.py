@@ -11,7 +11,7 @@ from astropy.coordinates import get_body_barycentric, get_body, get_moon
 from utilly import *
 
 
-def planet_coordinates(planet, date = None):
+def planet_coordinates(planet, date = None, printout = False):
     '''
     Defines Planet positions. 
     This should be accurate to a few arcminutes
@@ -40,17 +40,23 @@ def planet_coordinates(planet, date = None):
     DEC = jup.dec#.degree
     DEC = coordinates_string_dec(DEC)
     
-    print(planet, 'Position:')
-    print('Right Ascension ->', RA)
-    print('Declination     ->', DEC)
-    print(' ')
+    if printout == True:
+        print(planet, 'Position:')
+        print('Right Ascension ->', RA)
+        print('Declination     ->', DEC)
+        print(' ')
+    return RA, DEC
 
 
 #date = YYYYMMDD # Format of the date
 
-planet_list = ['Mercury', 'Venus', 'Mars', 
-               'Jupiter', 'Saturn', 'Uranus',
-               'Neptune']
+printing = False
 
-for planet in planet_list:
-    planet_coordinates(planet, date = None)
+if printing == True:
+
+    planet_list = ['Mercury', 'Venus', 'Mars', 
+                   'Jupiter', 'Saturn', 'Uranus',
+                   'Neptune']
+    
+    for planet in planet_list:
+        planet_coordinates(planet, date = None, printout = True)
