@@ -115,7 +115,7 @@ def make_entries(date, data, readout=5):
         
         if name == 'nan':
             continue
-        
+    
         exptime = l['Exposure Time']
         if str(exptime) == 'nan':
             exptime = 60 # Default time
@@ -139,7 +139,7 @@ def make_entries(date, data, readout=5):
                 print('Coordinates found for "{0}"'.format(name))
             else:
                 print()
-                print('No RA coordinates entered, searching for "{0}"'.format(name))
+                print('No RA coordinates entered, searching SIMBAD for "{0}"'.format(name))
                 try:
                     obj = Simbad.query_object(name)
                     ra = str(obj['RA'][0])
@@ -147,17 +147,18 @@ def make_entries(date, data, readout=5):
                     ra = coordinates_space(ra)
                     dec = coordinates_space(dec)
                     print('Coordinates found for "{0}"'.format(name))
-                except TypeError: 
-                    print()
-                    print('Checking Horizons for "{0}"'.format(name))
-                    mydate = Time(input_time).jd  # pass date as string
-                    ra, dec = horizons('charon',mydate,474)
-                    ra = ra/360*24
-                    print('Coordinates found for "{0}"'.format(name))
-                except:
-                    print()
-                    print('No target found in SIMBAD or Horizons. Skipping.')
-                    continue
+                except: 
+                    try:
+                        print()
+                        print('Checking Horizons for "{0}"'.format(name))
+                        mydate = Time(input_time).jd  # pass date as string
+                        ra, dec = horizons(name,mydate,474)
+                        ra = ra/360*24
+                        print('Coordinates found for "{0}"'.format(name))
+                    except:
+                        print()
+                        print('No target found in SIMBAD or Horizons. Skipping.')
+                        continue
         elif dec == 'nan':
             if name.lower() == 'io':
                 print()
@@ -175,7 +176,7 @@ def make_entries(date, data, readout=5):
                 print('Coordinates found for "{0}"'.format(name))
             else:
                 print()
-                print('No DEC coordinates entered, searching for "{0}"'.format(name))
+                print('No DEC coordinates entered, searching SIMBAD for "{0}"'.format(name))
                 try:
                     obj = Simbad.query_object(name)
                     ra = str(obj['RA'][0])
@@ -183,17 +184,18 @@ def make_entries(date, data, readout=5):
                     ra = coordinates_space(ra)
                     dec = coordinates_space(dec)
                     print('Coordinates found for "{0}"'.format(name))
-                except TypeError: 
-                    print()
-                    print('Checking Horizons for "{0}"'.format(name))
-                    mydate = Time(input_time).jd  # pass date as string
-                    ra, dec = horizons('charon',mydate,474)
-                    ra = ra/360*24
-                    print('Coordinates found for "{0}"'.format(name))
-                except:
-                    print()
-                    print('No target found in SIMBAD or Horizons. Skipping.')
-                    continue
+                except: 
+                    try:
+                        print()
+                        print('Checking Horizons for "{0}"'.format(name))
+                        mydate = Time(input_time).jd  # pass date as string
+                        ra, dec = horizons(name,mydate,474)
+                        ra = ra/360*24
+                        print('Coordinates found for "{0}"'.format(name))
+                    except:
+                        print()
+                        print('No target found in SIMBAD or Horizons. Skipping.')
+                        continue
         else:
             ra = coordinates_angle(ra)
             dec = coordinates_angle(dec)
@@ -224,6 +226,6 @@ def make_entries(date, data, readout=5):
         for f in filters:
             ob = make_obs_entry(exptime,f,repeats,name,ra,dec,priority=priority)
             obs += [ob]
-    return obs    
+    return obs
 
 # data = make_list()
