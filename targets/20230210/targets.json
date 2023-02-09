@@ -1,0 +1,272 @@
+[
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "jupiter",
+    "filter": "g",
+    "expTime": 60,
+    "ra": 0.49083333333333334,
+    "dec": 1.9561333333333333,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "jupiter",
+    "filter": "r",
+    "expTime": 60,
+    "ra": 0.49083333333333334,
+    "dec": 1.9561333333333333,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "jupiter",
+    "filter": "i",
+    "expTime": 60,
+    "ra": 0.49083333333333334,
+    "dec": 1.9561333333333333,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "ngc1232",
+    "filter": "g",
+    "expTime": 60,
+    "ra": 3.157585666666667,
+    "dec": -20.574246666666667,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "ngc1232",
+    "filter": "r",
+    "expTime": 60,
+    "ra": 3.157585666666667,
+    "dec": -20.574246666666667,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "ngc1232",
+    "filter": "i",
+    "expTime": 60,
+    "ra": 3.157585666666667,
+    "dec": -20.574246666666667,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "charon",
+    "filter": "g",
+    "expTime": 60,
+    "ra": 20.085474,
+    "dec": -22.69053,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "charon",
+    "filter": "r",
+    "expTime": 60,
+    "ra": 20.085474,
+    "dec": -22.69053,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "charon",
+    "filter": "i",
+    "expTime": 60,
+    "ra": 20.085474,
+    "dec": -22.69053,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "helix nebula",
+    "filter": "g",
+    "expTime": 60,
+    "ra": 22.48975756666667,
+    "dec": -20.8356245,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "helix nebula",
+    "filter": "r",
+    "expTime": 60,
+    "ra": 22.48975756666667,
+    "dec": -20.8356245,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "helix nebula",
+    "filter": "i",
+    "expTime": 60,
+    "ra": 22.48975756666667,
+    "dec": -20.8356245,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "io",
+    "filter": "g",
+    "expTime": 60,
+    "ra": 0.497506,
+    "dec": 1.97109,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "io",
+    "filter": "r",
+    "expTime": 60,
+    "ra": 0.497506,
+    "dec": 1.97109,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "io",
+    "filter": "i",
+    "expTime": 60,
+    "ra": 0.497506,
+    "dec": 1.97109,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "pluto",
+    "filter": "g",
+    "expTime": 60,
+    "ra": 20.085464666666667,
+    "dec": -22.69066,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "pluto",
+    "filter": "r",
+    "expTime": 60,
+    "ra": 20.085464666666667,
+    "dec": -22.69066,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "pluto",
+    "filter": "i",
+    "expTime": 60,
+    "ra": 20.085464666666667,
+    "dec": -22.69066,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "m33",
+    "filter": "g",
+    "expTime": 60,
+    "ra": 1.55848275,
+    "dec": 30.656105,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "m33",
+    "filter": "r",
+    "expTime": 60,
+    "ra": 1.55848275,
+    "dec": 30.656105,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "m33",
+    "filter": "i",
+    "expTime": 60,
+    "ra": 1.55848275,
+    "dec": 30.656105,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "m7",
+    "filter": "g",
+    "expTime": 60,
+    "ra": 17.891166666666667,
+    "dec": -34.83833333333333,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "m7",
+    "filter": "r",
+    "expTime": 60,
+    "ra": 17.891166666666667,
+    "dec": -34.83833333333333,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "m7",
+    "filter": "i",
+    "expTime": 60,
+    "ra": 17.891166666666667,
+    "dec": -34.83833333333333,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "ngc503",
+    "filter": "g",
+    "expTime": 60,
+    "ra": 1.3880708666666668,
+    "dec": 33.32576666666667,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "ngc503",
+    "filter": "r",
+    "expTime": 60,
+    "ra": 1.3880708666666668,
+    "dec": 33.32576666666667,
+    "priority": 1
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "ngc503",
+    "filter": "i",
+    "expTime": 60,
+    "ra": 1.3880708666666668,
+    "dec": 33.32576666666667,
+    "priority": 1
+  }
+]
