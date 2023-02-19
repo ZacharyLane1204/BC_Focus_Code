@@ -71,15 +71,18 @@ def make_look_entries(look,readout=5,filters=['g', 'r']):
             l = ll.iloc[j]
             rate_lim = rate_limit(l['Rate ("/min)'])
             exptime = 300
+            # print(l)
             ra,dec = format_coord(l['R.A.'],l['Dec.'])
             name = l['Target Name'].replace(' ','_').replace('/','')
-            priority = l['priority']
-            total_time = priority_time(priority)
-                    
-            exptime = int(round_look_exposures(exptime))
-
+            # priority = l['priority']
+            # print(priority)
+            # total_time = priority_time(priority)
+            total_time = 3*300
+            
+            # exptime = int(round_look_exposures(exptime))
+            priority = 5
             for f in filters:
-                repeats = int(total_time / (exptime + readout))
+                repeats = 3
                 ob = make_obs_entry(exptime,f,repeats,name,ra,dec,priority=priority)
                 obs += [ob]
     return obs    

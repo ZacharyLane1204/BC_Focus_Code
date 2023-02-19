@@ -60,7 +60,12 @@ def make_entries(date, data, readout=5):
     for j in range(len(data)):
         
         l = data.iloc[j]
-        repeats = 3
+        repeats = l.Repeats
+        repeats = str(repeats)
+        if repeats == 'nan':
+            repeats = 5
+        repeats = float(repeats)
+        repeats = int(repeats)
         mag = l.Magnitude
         filters = l.Filter
         filters = str(filters)
