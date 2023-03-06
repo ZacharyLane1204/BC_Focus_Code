@@ -9,6 +9,9 @@ import numpy as np
 from focus_BC_utils import *
 import pandas as pd
 import requests
+import time
+
+start = time.time()
 
 sheet_id = "1MC6uRbzfPupTay3QvXSHlgwqOou4a6H2Ac3feXzrVb4"
 sheet_name = "Sheet1"
@@ -25,3 +28,4 @@ FWHM = df['FWHM']
 
 focus_function(focus, FWHM)
 
+# print(time.time() - start)
