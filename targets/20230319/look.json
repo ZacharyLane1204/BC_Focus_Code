@@ -1,0 +1,422 @@
+[
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2023_A3",
+    "filter": "g",
+    "expTime": 300,
+    "ra": 229.10774999999998,
+    "dec": -0.1858611111111111,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2023_A3",
+    "filter": "r",
+    "expTime": 300,
+    "ra": 229.10774999999998,
+    "dec": -0.1858611111111111,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2022_S3",
+    "filter": "g",
+    "expTime": 300,
+    "ra": 101.36424999999998,
+    "dec": -13.53561111111111,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2022_S3",
+    "filter": "r",
+    "expTime": 300,
+    "ra": 101.36424999999998,
+    "dec": -13.53561111111111,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "157P",
+    "filter": "g",
+    "expTime": 300,
+    "ra": 157.115875,
+    "dec": -10.259055555555555,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "157P",
+    "filter": "r",
+    "expTime": 300,
+    "ra": 157.115875,
+    "dec": -10.259055555555555,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "285P",
+    "filter": "g",
+    "expTime": 300,
+    "ra": 24.571875,
+    "dec": 0.3332222222222222,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "285P",
+    "filter": "r",
+    "expTime": 300,
+    "ra": 24.571875,
+    "dec": 0.3332222222222222,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2022_E2",
+    "filter": "g",
+    "expTime": 300,
+    "ra": 139.92933333333332,
+    "dec": -12.237305555555555,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2022_E2",
+    "filter": "r",
+    "expTime": 300,
+    "ra": 139.92933333333332,
+    "dec": -12.237305555555555,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "81P",
+    "filter": "g",
+    "expTime": 300,
+    "ra": 261.22554166666663,
+    "dec": -19.057833333333335,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "81P",
+    "filter": "r",
+    "expTime": 300,
+    "ra": 261.22554166666663,
+    "dec": -19.057833333333335,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2022_E3",
+    "filter": "g",
+    "expTime": 300,
+    "ra": 71.23883333333333,
+    "dec": -5.2780555555555555,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2022_E3",
+    "filter": "r",
+    "expTime": 300,
+    "ra": 71.23883333333333,
+    "dec": -5.2780555555555555,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2022_A3",
+    "filter": "g",
+    "expTime": 300,
+    "ra": 131.545,
+    "dec": -6.950083333333334,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2022_A3",
+    "filter": "r",
+    "expTime": 300,
+    "ra": 131.545,
+    "dec": -6.950083333333334,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2021_Y1",
+    "filter": "g",
+    "expTime": 300,
+    "ra": 55.21962499999999,
+    "dec": -18.581305555555556,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2021_Y1",
+    "filter": "r",
+    "expTime": 300,
+    "ra": 55.21962499999999,
+    "dec": -18.581305555555556,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2021_G2",
+    "filter": "g",
+    "expTime": 300,
+    "ra": 131.23254166666663,
+    "dec": -36.85577777777778,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2021_G2",
+    "filter": "r",
+    "expTime": 300,
+    "ra": 131.23254166666663,
+    "dec": -36.85577777777778,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2021_T4",
+    "filter": "g",
+    "expTime": 300,
+    "ra": 6.775624999999999,
+    "dec": -11.323166666666667,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2021_T4",
+    "filter": "r",
+    "expTime": 300,
+    "ra": 6.775624999999999,
+    "dec": -11.323166666666667,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2021_S3",
+    "filter": "g",
+    "expTime": 300,
+    "ra": 78.97824999999999,
+    "dec": -31.61663888888889,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2021_S3",
+    "filter": "r",
+    "expTime": 300,
+    "ra": 78.97824999999999,
+    "dec": -31.61663888888889,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2021_P4",
+    "filter": "g",
+    "expTime": 300,
+    "ra": 334.64366666666666,
+    "dec": -61.43944444444444,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2021_P4",
+    "filter": "r",
+    "expTime": 300,
+    "ra": 334.64366666666666,
+    "dec": -61.43944444444444,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2021_E3",
+    "filter": "g",
+    "expTime": 300,
+    "ra": 100.54604166666667,
+    "dec": -15.889722222222222,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2021_E3",
+    "filter": "r",
+    "expTime": 300,
+    "ra": 100.54604166666667,
+    "dec": -15.889722222222222,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2021_C5",
+    "filter": "g",
+    "expTime": 300,
+    "ra": 285.10908333333333,
+    "dec": -74.2876111111111,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2021_C5",
+    "filter": "r",
+    "expTime": 300,
+    "ra": 285.10908333333333,
+    "dec": -74.2876111111111,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2020_R7",
+    "filter": "g",
+    "expTime": 300,
+    "ra": 271.90674999999993,
+    "dec": 7.037111111111111,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2020_R7",
+    "filter": "r",
+    "expTime": 300,
+    "ra": 271.90674999999993,
+    "dec": 7.037111111111111,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "A2019_U5",
+    "filter": "g",
+    "expTime": 300,
+    "ra": 184.6735,
+    "dec": -1.1324166666666666,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "A2019_U5",
+    "filter": "r",
+    "expTime": 300,
+    "ra": 184.6735,
+    "dec": -1.1324166666666666,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2019_L3",
+    "filter": "g",
+    "expTime": 300,
+    "ra": 136.89208333333332,
+    "dec": -34.49905555555556,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2019_L3",
+    "filter": "r",
+    "expTime": 300,
+    "ra": 136.89208333333332,
+    "dec": -34.49905555555556,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2019_E3",
+    "filter": "g",
+    "expTime": 300,
+    "ra": 74.42724999999999,
+    "dec": -71.81755555555556,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2019_E3",
+    "filter": "r",
+    "expTime": 300,
+    "ra": 74.42724999999999,
+    "dec": -71.81755555555556,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2017_K2",
+    "filter": "g",
+    "expTime": 300,
+    "ra": 47.80066666666666,
+    "dec": -46.72061111111111,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2017_K2",
+    "filter": "r",
+    "expTime": 300,
+    "ra": 47.80066666666666,
+    "dec": -46.72061111111111,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2023_A3",
+    "filter": "g",
+    "expTime": 300,
+    "ra": 229.1077083333333,
+    "dec": -0.1858611111111111,
+    "priority": 5
+  },
+  {
+    "count": 3,
+    "expType": "object",
+    "object": "C2023_A3",
+    "filter": "r",
+    "expTime": 300,
+    "ra": 229.1077083333333,
+    "dec": -0.1858611111111111,
+    "priority": 5
+  }
+]
